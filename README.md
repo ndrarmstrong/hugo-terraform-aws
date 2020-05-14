@@ -90,8 +90,8 @@ with the S3 bucket URL and Cloudfront distribution ID from your Terraform deploy
 [deployment]
   [[deployment.targets]]
     name = "S3"
-    URL = "s3://static-example.nicholasarmstrong.com?region=ca-central-1" // Terraform output 's3_bucket_url'
-    cloudFrontDistributionID = "ABC12345" // Terraform output 'cf_distribution_id'
+    URL = "s3://static-example.nicholasarmstrong.com?region=ca-central-1" # Terraform output 's3_bucket_url'
+    cloudFrontDistributionID = "ABC12345" # Terraform output 'cf_distribution_id'
 ```
 
 If you created a new Hugo site, copy the entire block above into your `config.toml` and adjust for your deployment.
