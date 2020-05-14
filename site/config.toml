@@ -1,0 +1,14 @@
+baseURL = "https://static-example.nicholasarmstrong.com/"
+languageCode = "en-us"
+title = "Example Static Hugo Site"
+theme = "ananke"
+
+[deployment]
+  [[deployment.targets]]
+    name = "S3"
+    URL = "s3://static-example.nicholasarmstrong.com?region=ca-central-1"
+    cloudFrontDistributionID = "ABC12345"
+  [[deployment.matchers]]
+    #  Cache static assets for 1 year.
+    pattern = "^.+\\.(js|css|svg|ttf|png|jpg|svg|woff|woff2)$"
+    cacheControl = "max-age=31536000, no-transform, public"

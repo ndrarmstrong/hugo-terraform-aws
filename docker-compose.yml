@@ -1,0 +1,11 @@
+version: '3'
+services:
+  static-dev:
+    build:
+      context: .
+    image: static-dev:latest
+    hostname: static-dev
+    network_mode: host
+    volumes:
+      - ./site:/home/static/site
+      - ./infra:/home/static/infra
